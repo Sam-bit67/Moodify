@@ -1,33 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify – Music That Matches Your Mood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1 style="background-color:yellow;">FORMS</h1>
-<p style="background-color:yellow;">...</p>
-<h2>Text input feedback</h2>
+    <nav class="navbar" id="main-nav">
+        <div class="logo">Moodify</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#moods">Moods</a></li>
+            <li><a href="#playlists">Playlists</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
 
-<form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="Sarthak"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Soni">
-   <input type="submit" value="Submit">
-<body style="background-color:yellow;">
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Music That Matches Your Mood</h1>
+            <p>Discover the perfect soundtrack for every moment, curated just for you.</p>
+        </div>
+    </header>
 
-</form>
-<p>Choose your favorite colour:</p>
+    <main id="moods" class="moods-container">
+        <!-- Happy Section -->
+        <section class="mood-section" id="mood-happy">
+            <h2 class="mood-title">Happy 😊</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info"><h3>Happy</h3><p>Pharrell Williams</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/60nZcImGEnVKZQuymD2oVN?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Can't Stop the Feeling!</h3><p>Justin Timberlake</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1WkMMavIMc4JZ8cfMqkHcA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Walking On Sunshine</h3><p>Katrina & The Waves</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/05wIrZSwqk2JZ1mumHl5eq?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
 
-<form>
-  <input type="radio" id="red" name="fav_colour" value="yellow">
-  <label for="red">red</label><br>
-  <input type="radio" id="purple" name="fav_colour" value="green">
-  <label for="purple">purple</label><br>
-  <input type="radio" id="violet" name="fav_colour" value="pink">
-  <label for="violet">violet</label>
-</form>
+        <!-- Sad Section -->
+        <section class="mood-section" id="mood-sad">
+            <h2 class="mood-title">Sad 😢</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info"><h3>Someone Like You</h3><p>Adele</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1zwMYTA5nlNjZxYrvBB2pV?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Fix You</h3><p>Coldplay</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4r6eCGYijhHttw2cOADZTo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Say Something</h3><p>A Great Big World</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/60a0Rd6pjAWkO1O1A61k41?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
 
-<p>Thanks for your response.</p>
+        <!-- Chill Section -->
+        <section class="mood-section" id="mood-chill">
+            <h2 class="mood-title">Chill 😌</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info"><h3>Sunset Lover</h3><p>Petit Biscuit</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0hNduWmlWmEmuwEFcYvRuN?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Weightless</h3><p>Marconi Union</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6kkwzB6hHLvdFqONzgvDBy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Location</h3><p>Khalid</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/152lZdxL1OR0ZMW6KquMif?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
 
-<p>Looking forward .</p>
+        <!-- Energetic Section -->
+        <section class="mood-section" id="mood-energetic">
+            <h2 class="mood-title">Energetic ⚡</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info"><h3>Lose Yourself</h3><p>Eminem</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lQ8MOhq6IN2w8EYcFxc48?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Can't Hold Us</h3><p>Macklemore & Ryan Lewis</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3b0E5A7uAofB0qWvQo3mEv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Till I Collapse</h3><p>Eminem</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4xkOaSrkexMciUUogZKVTS?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Romantic Section -->
+        <section class="mood-section" id="mood-romantic">
+            <h2 class="mood-title">Romantic ❤️</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info"><h3>Perfect</h3><p>Ed Sheeran</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0tgVpDi06u2M7T0c265R44?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>All of Me</h3><p>John Legend</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info"><h3>Thinking Out Loud</h3><p>Ed Sheeran</p></div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/34gCuhDGsG4bEicF4t5u8t?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="about">
+        <p>&copy; 2026 Moodify. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
