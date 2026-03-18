@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Playlist - Moodify</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Linked external file -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Playlist specific styling & fixes */
+        .playlist-view {
+            padding-top: 60px;
+            min-height: calc(100vh - 120px);
+        }
+
+        .error-state {
+            text-align: center;
+            padding: 80px 5%;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .error-state h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .error-state p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: var(--accent-green);
+            color: var(--bg-base);
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 24px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+        }
+
+        /* Hover glows explicitly mapped to exactly the ID requested */
+        #happy .song-card:hover {
+            border-color: rgba(255, 215, 0, 0.6);
+        }
+
+        #happy .song-card:hover::before {
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.15);
+        }
+
+        #sad .song-card:hover {
+            border-color: rgba(65, 105, 225, 0.6);
+        }
+
+        #sad .song-card:hover::before {
+            box-shadow: 0 15px 35px rgba(65, 105, 225, 0.15);
+        }
+
+        #chill .song-card:hover {
+            border-color: rgba(187, 134, 252, 0.6);
+        }
+
+        #chill .song-card:hover::before {
+            box-shadow: 0 15px 35px rgba(187, 134, 252, 0.15);
+        }
+
+        #energetic .song-card:hover {
+            border-color: rgba(255, 69, 0, 0.6);
+        }
+
+        #energetic .song-card:hover::before {
+            box-shadow: 0 15px 35px rgba(255, 69, 0, 0.15);
+        }
+
+        #romantic .song-card:hover {
+            border-color: rgba(255, 20, 147, 0.6);
+        }
+
+        #romantic .song-card:hover::before {
+            box-shadow: 0 15px 35px rgba(255, 20, 147, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="main-nav">
+        <div class="logo">Moodify</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mood.html">Moods</a></li>
+            <li><a href="playlist.html" class="active">Playlists</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="moods-container playlist-view">
+
+        <!-- Happy Playlist -->
+        <section class="mood-section" id="happy" style="display: none;">
+            <h2 class="mood-title">Happy Playlist 😊</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Happy</h3>
+                        <p>Pharrell Williams</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/60nZcImGEnVKZQuymD2oVN?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Can't Stop the Feeling!</h3>
+                        <p>Justin Timberlake</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/1WkMMavIMc4JZ8cfMqkHcA?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Walking On Sunshine</h3>
+                        <p>Katrina & The Waves</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/05wIrZSwqk2JZ1mumHl5eq?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sad Playlist -->
+        <section class="mood-section" id="sad" style="display: none;">
+            <h2 class="mood-title">Sad Playlist 😢</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Someone Like You</h3>
+                        <p>Adele</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/1zwMYTA5nlNjZxYrvBB2pV?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Fix You</h3>
+                        <p>Coldplay</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/4r6eCGYijhHttw2cOADZTo?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Say Something</h3>
+                        <p>A Great Big World</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/60a0Rd6pjAWkO1O1A61k41?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chill Playlist -->
+        <section class="mood-section" id="chill" style="display: none;">
+            <h2 class="mood-title">Chill Playlist 😌</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Sunset Lover</h3>
+                        <p>Petit Biscuit</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/0hNduWmlWmEmuwEFcYvRuN?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Weightless</h3>
+                        <p>Marconi Union</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/6kkwzB6hHLvdFqONzgvDBy?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Location</h3>
+                        <p>Khalid</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/152lZdxL1OR0ZMW6KquMif?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energetic Playlist -->
+        <section class="mood-section" id="energetic" style="display: none;">
+            <h2 class="mood-title">Energetic Playlist ⚡</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Lose Yourself</h3>
+                        <p>Eminem</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/7lQ8MOhq6IN2w8EYcFxc48?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Can't Hold Us</h3>
+                        <p>Macklemore & Ryan Lewis</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/3b0E5A7uAofB0qWvQo3mEv?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Till I Collapse</h3>
+                        <p>Eminem</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/4xkOaSrkexMciUUogZKVTS?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Romantic Playlist -->
+        <section class="mood-section" id="romantic" style="display: none;">
+            <h2 class="mood-title">Romantic Playlist ❤️</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Perfect</h3>
+                        <p>Ed Sheeran</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/0tgVpDi06u2M7T0c265R44?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>All of Me</h3>
+                        <p>John Legend</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+                <div class="song-card">
+                    <div class="song-info">
+                        <h3>Thinking Out Loud</h3>
+                        <p>Ed Sheeran</p>
+                    </div>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/34gCuhDGsG4bEicF4t5u8t?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error State -->
+        <div id="error-screen" class="error-state" style="display: none;">
+            <h2>Playlist Not Found 🎧</h2>
+            <p>We couldn't find a playlist for this mood.</p>
+            <a href="mood.html" class="btn">Select a Mood</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Moodify. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to automatically display the correct playlist based on URL Parameter -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Read URL Params
+            const params = new URLSearchParams(window.location.search);
+            const mood = params.get('mood');
+
+            // Expected, valid moods array
+            const validMoods = ['happy', 'sad', 'chill', 'energetic', 'romantic'];
+
+            if (mood && validMoods.includes(mood.toLowerCase())) {
+                const targetId = mood.toLowerCase();
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.style.display = 'block';
+                    // Apply fade-in effect to the active section
+                    targetElement.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            } else {
+                // Display error condition instead
+                document.getElementById('error-screen').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>
