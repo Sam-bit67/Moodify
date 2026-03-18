@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Mood - Moodify</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="main-nav">
+        <div class="logo">Moodify</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mood.html" class="active">Moods</a></li>
+            <li><a href="index.html#playlists">Playlists</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="select-mood-main">
+        <div class="mood-header">
+            <h1>Select Your Mood</h1>
+            <p>Pick how you're feeling and we'll handle the rest.</p>
+        </div>
+
+        <div class="mood-cards-grid">
+            <!-- Happy Card -->
+            <div class="mood-card" onclick="location.href='playlist.html?mood=happy'">
+                <div class="mood-emoji">😊</div>
+                <h3>Happy</h3>
+                <p>Feel good songs</p>
+            </div>
+
+            <!-- Sad Card -->
+            <div class="mood-card" onclick="location.href='playlist.html?mood=sad'">
+                <div class="mood-emoji">😢</div>
+                <h3>Sad</h3>
+                <p>Songs for the tears</p>
+            </div>
+
+            <!-- Chill Card -->
+            <div class="mood-card" onclick="location.href='playlist.html?mood=chill'">
+                <div class="mood-emoji">😌</div>
+                <h3>Chill</h3>
+                <p>Relax and unwind</p>
+            </div>
+
+            <!-- Energetic Card -->
+            <div class="mood-card" onclick="location.href='playlist.html?mood=energetic'">
+                <div class="mood-emoji">⚡</div>
+                <h3>Energetic</h3>
+                <p>Pump up the volume</p>
+            </div>
+
+            <!-- Romantic Card -->
+            <div class="mood-card" onclick="location.href='playlist.html?mood=romantic'">
+                <div class="mood-emoji">❤️</div>
+                <h3>Romantic</h3>
+                <p>Love is in the air</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <p>&copy; 2026 Moodify. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
